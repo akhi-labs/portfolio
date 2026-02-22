@@ -9,7 +9,7 @@ import { projects } from "@/data/projects";
 export const metadata: Metadata = {
   title: "Muhammad Ahmed — Automation Engineer & AI Agent Builder",
   description:
-    "Portfolio of Muhammad Ahmed — Automation Engineer and AI Agent Builder. Building scalable systems with N8N, custom agents, and marketing automation.",
+    "Muhammad Ahmed is an Automation Engineer specializing in AI-powered workflows, agentic systems, and marketing automation. Based at Zigron, building for the US market.",
 };
 
 export default function HomePage() {
