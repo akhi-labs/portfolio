@@ -7,7 +7,7 @@ import { techStack } from "@/data/techstack";
 import { projects } from "@/data/projects";
 
 export const metadata: Metadata = {
-  title: "Muhammad Ahmed — Automation Engineer & AI Agent Builder",
+  title: "Muhammad Ahmed — Automation Engineer & Agentic Workflows Dev",
   description:
     "Muhammad Ahmed is an Automation Engineer specializing in AI-powered workflows, agentic systems, and marketing automation. Based at Zigron, building for the US market.",
 };

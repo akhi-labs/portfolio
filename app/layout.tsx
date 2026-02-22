@@ -32,7 +32,7 @@ const fraunces = Fraunces({
 export const metadata: Metadata = {
   metadataBase: new URL("https://portfolio-eta-five-52.vercel.app"),
   title: {
-    default: "Muhammad Ahmed — Automation Engineer & AI Agent Builder",
+    default: "Muhammad Ahmed — Automation Engineer & Agentic Workflows Dev",
     template: "%s — Muhammad Ahmed",
   },
   description:
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "Muhammad Ahmed Portfolio",
-    title: "Muhammad Ahmed — Automation Engineer & AI Agent Builder",
+    title: "Muhammad Ahmed — Automation Engineer & Agentic Workflows Dev",
     description:
       "Muhammad Ahmed is an Automation Engineer specializing in AI-powered workflows, agentic systems, and marketing automation.",
     images: [
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Muhammad Ahmed — Automation Engineer & AI Agent Builder",
+    title: "Muhammad Ahmed — Automation Engineer & Agentic Workflows Dev",
     description:
       "Muhammad Ahmed is an Automation Engineer specializing in AI-powered workflows, agentic systems, and marketing automation.",
     images: ["/my-photo.webp"],
