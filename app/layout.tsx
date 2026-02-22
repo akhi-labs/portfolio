@@ -67,7 +67,7 @@ export default function RootLayout({
         <Topbar />
         <GlobalReveal />
         {children}
-        <footer className="py-8 px-20 flex justify-between items-center border-t border-[var(--border)] max-w-[1440px] mx-auto">
+        <footer className="py-6 px-5 sm:py-8 sm:px-20 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-0 border-t border-[var(--border)] max-w-[1440px] mx-auto">
           <p className="text-[var(--text-tertiary)] text-sm font-[family-name:var(--font-dm-mono)]">
             &copy; 2026 Muhammad Ahmed
           </p>
