@@ -39,3 +39,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# IDE / tool folders
+.agent/
+.agents/
+.claude/
+.cursor/
+.kiro/
+pencil-new.pen
+
+# large assets not needed in repo
+Portfolio Assets Images/
+public/demo.mp4
