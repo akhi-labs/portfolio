@@ -53,6 +53,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "Muhammad Ahmed Portfolio",
+    title: "Muhammad Ahmed — Automation Engineer & AI Agent Builder",
+    description:
+      "Muhammad Ahmed is an Automation Engineer specializing in AI-powered workflows, agentic systems, and marketing automation.",
+    images: [
+      {
+        url: "/my-photo.webp",
+        width: 1200,
+        height: 630,
+        alt: "Muhammad Ahmed — Automation Engineer",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Muhammad Ahmed — Automation Engineer & AI Agent Builder",
+    description:
+      "Muhammad Ahmed is an Automation Engineer specializing in AI-powered workflows, agentic systems, and marketing automation.",
+    images: ["/my-photo.webp"],
   },
 };
 
