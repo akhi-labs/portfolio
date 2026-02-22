@@ -30,6 +30,7 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://portfolio-eta-five-52.vercel.app"),
   title: {
     default: "Muhammad Ahmed — Automation Engineer & AI Agent Builder",
     template: "%s — Muhammad Ahmed",
