@@ -249,29 +249,6 @@ export default function HomePage() {
               </div>
             </a>
 
-            <a className="social-link social-link--fv social-link--disabled">
-              <div className="social-icon-wrap">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M23 0H1C.4 0 0 .4 0 1v22c0 .6.4 1 1 1h22c.6 0 1-.4 1-1V1c0-.6-.4-1-1-1zM10.7 17.4c0 1.3-1 2.1-2.5 2.1-1 0-2-.4-2.7-1.1l.8-1.1c.5.5 1.1.8 1.8.8.5 0 .8-.2.8-.6v-.1c0-.5-.6-.7-1.3-.9C6.4 16 5.3 15.4 5.3 14v-.1c0-1.3 1-2.1 2.4-2.1.9 0 1.8.3 2.4.9l-.7 1.1c-.5-.4-1-.7-1.7-.7-.5 0-.7.2-.7.6v.1c0 .5.6.6 1.3.9 1.2.4 2.4 1 2.4 2.6zm5.8-5.5h-1.6V15c0 .6.3.9.9.9.3 0 .5 0 .7-.1v1.4c-.3.1-.7.2-1.1.2-1.4 0-2.2-.7-2.2-2.2v-3.2H12v-1.5h1.2V8.9h1.8v1.6h1.6v1.4z"/>
-                </svg>
-              </div>
-              <div className="social-text">
-                <span className="name">Fiverr</span>
-                <span className="handle">Hire me on Fiverr</span>
-              </div>
-            </a>
-
-            <a className="social-link social-link--uw social-link--disabled">
-              <div className="social-icon-wrap">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.546-1.405 0-2.543-1.14-2.543-2.546V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/>
-                </svg>
-              </div>
-              <div className="social-text">
-                <span className="name">Upwork</span>
-                <span className="handle">Hire me on Upwork</span>
-              </div>
-            </a>
           </div>
         </div>
       </RevealSection>
