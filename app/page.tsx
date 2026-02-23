@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 import TerminalHero from "@/components/TerminalHero";
 import RevealSection from "@/components/RevealSection";
+import ContactForm from "@/components/ContactForm";
 import { experience, skillCategories } from "@/data/experience";
 import { techStack } from "@/data/techstack";
 import { projects } from "@/data/projects";
@@ -189,6 +190,18 @@ export default function HomePage() {
             ))}
           </div>
         </div>
+      </RevealSection>
+
+      <div className="divider" />
+
+      {/* ═══ CONTACT ═══ */}
+      <RevealSection as="section" className="contact-section-home">
+        <div className="projects-header">
+          <h2>Contact</h2>
+          <div className="line" />
+        </div>
+        <p className="contact-tagline" style={{ marginBottom: "2rem" }}>Got an idea? Let&apos;s make it real.</p>
+        <ContactForm />
       </RevealSection>
 
     </main>
