@@ -208,9 +208,6 @@ export default function HomePage() {
           <div className="contact-divider-v" />
 
           <div className="contact-socials">
-            <h3>Connect with me</h3>
-            <p className="sub">Available for new projects &amp; collaborations</p>
-
             <a href="https://www.instagram.com/akhi_muhmed" target="_blank" rel="noopener noreferrer" className="social-link social-link--ig">
               <div className="social-icon-wrap">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">

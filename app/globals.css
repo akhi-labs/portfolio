@@ -1084,6 +1084,7 @@ main { padding-top: 60px; }
 /* ════════════════════════
    CONTACT PAGE
    ════════════════════════ */
+.contact-section-home { padding: 80px; max-width: 1440px; margin: 0 auto; }
 .contact-page { max-width: 1440px; margin: 0 auto; padding: 100px 80px 80px; }
 .contact-headline { font-family: var(--font-poppins), sans-serif; font-size: clamp(38px, 5vw, 58px); font-weight: 700; letter-spacing: -2px; text-align: center; margin-bottom: 8px; }
 .contact-tagline { text-align: center; font-size: 18px; color: var(--text-secondary); margin-bottom: 40px; }
@@ -1203,7 +1204,7 @@ main { padding-top: 60px; }
   .about-badge { top: 40px; left: 20px; }
   .contact-card { grid-template-columns: 1fr; }
   .contact-divider-v { display: none; }
-  .experience-skills, .tech-stack, .projects { padding: 60px 40px; }
+  .experience-skills, .tech-stack, .projects, .contact-section-home { padding: 60px 40px; }
   .project-hero { padding: 0 40px 40px; }
   .flowchart-section { padding: 0 40px 40px; }
   .deployed-at { padding: 0 40px 48px; }
@@ -1227,7 +1228,7 @@ main { padding-top: 60px; }
   .project-card { min-width: 280px; }
   .ap-grid { grid-template-columns: 1fr; }
   .ap-page { padding: 20px 20px 40px; }
-  .experience-skills, .tech-stack, .projects, .contact-page { padding: 40px 20px; }
+  .experience-skills, .tech-stack, .projects, .contact-page, .contact-section-home { padding: 40px 20px; }
   .about { padding: 60px 20px 40px; }
   .about-badge { top: 20px; left: 10px; padding: 10px 20px; }
   .about-badge span { font-size: 17px; }
