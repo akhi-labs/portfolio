@@ -686,13 +686,10 @@ main { padding-top: 60px; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: blur(6px);
-  transform: scale(1.08);
-  transition: filter 0.5s ease, transform 0.5s ease;
+  transition: transform 0.5s ease;
 }
 .project-card:hover .proj-img {
-  filter: blur(0);
-  transform: scale(1.0);
+  transform: scale(1.04);
 }
 
 .project-card-content { padding: 16px 20px; display: flex; flex-direction: column; gap: 10px; }
@@ -763,13 +760,10 @@ main { padding-top: 60px; }
   height: 100%;
   object-fit: cover;
   border-radius: var(--radius-lg);
-  filter: blur(6px);
-  transform: scale(1.08);
-  transition: filter 0.5s ease, transform 0.5s ease;
+  transition: transform 0.5s ease;
 }
 .project-hero-img:hover .project-hero-img-actual {
-  filter: blur(0);
-  transform: scale(1.0);
+  transform: scale(1.04);
 }
 
 .placeholder-inner { display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; }
