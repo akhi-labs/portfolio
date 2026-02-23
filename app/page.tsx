@@ -201,7 +201,9 @@ export default function HomePage() {
           <div className="line" />
         </div>
         <p className="contact-tagline" style={{ marginBottom: "2rem" }}>Got an idea? Let&apos;s make it real.</p>
-        <ContactForm />
+        <div style={{ maxWidth: 680, margin: "0 auto" }}>
+          <ContactForm />
+        </div>
       </RevealSection>
 
     </main>
