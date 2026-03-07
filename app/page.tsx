@@ -30,18 +30,13 @@ export default function HomePage() {
         <div className="about-content">
           <h2 className="greeting">Hi, I&apos;m Muhammad Ahmed</h2>
           <p className="bio">
-            I&apos;m an Automation Engineer at Zigron, a US-based company where I own the full
-            automation stack — from AI voice agents and RAG chatbots to cold email engines,
-            LinkedIn outreach, and SEO content pipelines. I don&apos;t just set up tools; I
-            architect systems that run themselves.
+            I&apos;m an Automation Engineer currently working with Zigron, a US-based company, where I design and deploy AI-powered systems that replace manual business operations with intelligent workflows.
             <br /><br />
-            Before this, I worked with Alibaba in China on international market research and live
-            broadcasting, and managed large-scale community and growth operations across Pakistan.
-            That cross-industry background means I understand both the technical build and the
-            business outcome it needs to drive.
+            My work focuses on building end-to-end automation across marketing, sales, and operations — from autonomous outreach systems and AI-driven customer interaction workflows to scalable content production pipelines.
             <br /><br />
-            Today I work with clients globally — turning manual, repetitive processes into
-            intelligent workflows that scale without headcount.
+            Instead of simply connecting tools, I architect systems that allow businesses to run critical processes automatically and scale without increasing headcount.
+            <br /><br />
+            Before this, I worked with Alibaba in China on international market research and later led large-scale community and growth initiatives across Pakistan. This experience helps me bridge the gap between technical automation and real business outcomes.
           </p>
           <p className="spec-title">WHAT I SPECIALIZE IN</p>
 
