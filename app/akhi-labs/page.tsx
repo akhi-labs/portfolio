@@ -15,8 +15,14 @@ export default function AkhiLabsPage() {
         <p className="labs-sub">Something is being built here.</p>
 
         <div className="labs-messages">
-          <p>Long Live Iran</p>
-          <p>Free Palestine</p>
+          <div className="labs-msg">
+            <img src="/iran.svg" alt="Iran" className="labs-flag" />
+            <p>#LongLiveIran</p>
+          </div>
+          <div className="labs-msg">
+            <img src="/palestine.svg" alt="Palestine" className="labs-flag" />
+            <p>#FreePalestine</p>
+          </div>
         </div>
       </section>
     </main>

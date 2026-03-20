@@ -1294,10 +1294,20 @@ main { padding-top: 60px; }
 .labs-messages {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
   font-family: var(--font-dm-sans), sans-serif;
   font-size: 18px;
   font-weight: 600;
   color: var(--text-primary);
   letter-spacing: 0.5px;
+}
+.labs-msg {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.labs-flag {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
 }
