@@ -14,14 +14,14 @@ export const experience: ExperienceEntry[] = [
   {
     date: "2025 — Present",
     role: "Automation Engineer",
-    company: "Zigron — US Market",
+    company: "Zigron — US",
     description:
       "Marketing automation, AI chatbots (RAG), voice agents & cold email systems.",
   },
   {
     date: "2023 — 2024",
     role: "Personal Branding & Market Researcher",
-    company: "Alibaba — China (Contract)",
+    company: "Alibaba — China",
     description:
       "Live broadcasting, international outreach, cross-functional teams & growth strategies.",
   },

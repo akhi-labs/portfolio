@@ -12,7 +12,7 @@ export default function AkhiLabsPage() {
       <section className="akhi-labs-page">
         <p className="labs-label">// AKHI-LABS</p>
         <h1 className="labs-heading">Coming Soon</h1>
-        <p className="labs-sub">Something is being built here.</p>
+        <p className="labs-sub">Experiments, tools, and things that don&apos;t fit anywhere else — loading.</p>
 
         <div className="labs-messages">
           <div className="labs-msg">
