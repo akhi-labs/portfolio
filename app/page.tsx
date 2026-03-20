@@ -30,7 +30,7 @@ export default function HomePage() {
         <div className="about-content">
           <h2 className="greeting">Hi, I&apos;m Muhammad Ahmed</h2>
           <p className="bio">
-            I&apos;m an Automation Engineer currently working with Zigron, a US-based company, where I design and deploy AI-powered systems that replace manual business operations with intelligent workflows.
+            I&apos;m a Self-Taught Automation Engineer currently working with Zigron, a US-based company, where I design and deploy AI-powered systems that replace manual business operations with intelligent workflows.
             <br /><br />
             My work focuses on building end-to-end automation across marketing, sales, and operations — from autonomous outreach systems and AI-driven customer interaction workflows to scalable content production pipelines.
             <br /><br />

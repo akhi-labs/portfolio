@@ -8,6 +8,7 @@ const links = [
   { href: "/projects", label: "Projects" },
   { href: "/services", label: "Services" },
   { href: "/contact", label: "Contact" },
+  { href: "/akhi-labs", label: "Akhi-Labs" },
 ];
 
 export default function Topbar() {
