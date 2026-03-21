@@ -22,9 +22,9 @@ export const services: Service[] = [
   },
   {
     num: "03",
-    title: "Meta Ads",
+    title: "Paid Marketing",
     description:
-      "Lead generation campaigns on Meta — strategy, creative, targeting, and optimization. Manual campaign management as a freelance service, powered by data-driven insights to maximize your ROAS.",
+      "Performance-driven ad campaigns across Meta, Google, and LinkedIn — from audience research and creative strategy to A/B testing and CPL optimization. Built to generate qualified leads at scale with measurable ROAS.",
     tags: ["Meta Business", "Analytics", "Lead Gen"],
   },
   {
