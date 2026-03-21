@@ -36,9 +36,9 @@ export const services: Service[] = [
   },
   {
     num: "05",
-    title: "Vibe Coding",
+    title: "Agentic UI/UX & Coding",
     description:
-      "Full web apps and MVPs built fast using AI-assisted development — from idea to deployed product. Next.js frontends, landing pages, dashboards, and custom tools shipped at speed without sacrificing quality.",
-    tags: ["Next.js", "AI-Assisted", "MVP", "Deployment"],
+      "End-to-end web apps, dashboards, and MVPs designed and built using AI-native workflows — from wireframe to deployed product. Clean UI/UX paired with agentic coding pipelines that ship production-grade Next.js frontends, landing pages, and custom tools at speed.",
+    tags: ["Next.js", "UI/UX", "Agentic Dev", "Deployment"],
   },
 ];
