@@ -36,9 +36,9 @@ export const services: Service[] = [
   },
   {
     num: "05",
-    title: "Agentic UI/UX & Coding",
+    title: "UI/UX & Full-Stack Development",
     description:
-      "End-to-end web apps, dashboards, and MVPs designed and built using AI-native workflows — from wireframe to deployed product. Clean UI/UX paired with agentic coding pipelines that ship production-grade Next.js frontends, landing pages, and custom tools at speed.",
-    tags: ["Next.js", "UI/UX", "Agentic Dev", "Deployment"],
+      "Pixel-perfect interfaces backed by solid full-stack architecture. From responsive UI/UX design to Next.js frontends, API integrations, and database-driven backends — complete web solutions built, tested, and deployed end-to-end.",
+    tags: ["Next.js", "UI/UX", "Full-Stack", "Agentic Dev", "Deployment"],
   },
 ];

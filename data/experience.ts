@@ -16,7 +16,7 @@ export const experience: ExperienceEntry[] = [
     role: "Automation Engineer",
     company: "Zigron — US",
     description:
-      "Marketing automation, AI chatbots (RAG), voice agents & cold email systems.",
+      "AI agents, RAG chatbots, voice systems, cold email automation, and full-stack web apps — built end-to-end with agentic UI/UX workflows.",
   },
   {
     date: "2023 — 2024",
@@ -37,11 +37,11 @@ export const experience: ExperienceEntry[] = [
 export const skillCategories: SkillCategory[] = [
   {
     label: "TECHNICAL",
-    skills: ["HTML", "CSS", "JSON", "APIs", "Python Scripts", "Curls"],
+    skills: ["HTML", "CSS", "JavaScript", "Python", "SQL", "REST APIs", "Git", "Web Scraping", "Webhooks"],
   },
   {
     label: "AI TOOLS & FRAMEWORKS",
-    skills: ["CrewAI", "LangChain", "MCPs", "Vapi", "Haygen", "Veo3 API", "Ideogram", "Make.com"],
+    skills: ["CrewAI", "LangChain", "MCPs", "Vapi", "HeyGen", "OpenAI API", "ElevenLabs", "N8N", "Pinecone"],
   },
   {
     label: "BUSINESS & MARKETING",
