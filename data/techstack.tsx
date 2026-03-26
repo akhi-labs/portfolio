@@ -72,8 +72,8 @@ export const techStack: TechItem[] = [
     name: "Meta Ads",
     desc: "Lead gen campaigns on Facebook & Instagram — audience targeting, A/B testing, CPL optimisation.",
     icon: (
-      <svg viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="28" height="18">
-        <path d="M9.5 4C6.5 4 4.2 6.5 2.5 9.5C1 12 0 15 0 17c0 2 1 3 2.5 3 2 0 3.5-1.5 5.5-5l2-3.5c1.5-2.5 3.5-5 6-5s4.5 2.5 6 5l2 3.5c2 3.5 3.5 5 5.5 5 1.5 0 2.5-1 2.5-3 0-2-1-5-2.5-7.5C27.8 6.5 25.5 4 22.5 4c-2.5 0-4.5 2.5-6 5L14.5 12.5c-1.5 2.5-3.5 5-6 5s-3.5-1.5-3.5-5c0-2 1-5 2.5-7.5" stroke="#0081FB" strokeWidth="3" strokeLinecap="round"/>
+      <svg viewBox="0 0 512 512" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M115.3 169.2c-34.2 0-62.5 28.7-85.3 69.8-16.7 30.1-30 65.4-30 90.8 0 27.5 12.3 46.2 38 46.2 28.8 0 47.3-24 76.3-74.2l19.5-33.8c22.3-38.4 53.8-72.8 96.2-72.8s72.3 34.4 94.5 72.8l19.5 33.8c29 50.2 47.5 74.2 76.3 74.2 25.7 0 38-18.7 38-46.2 0-25.4-13.3-60.7-30-90.8-22.8-41.1-51.1-69.8-85.3-69.8-38.5 0-63.5 34.4-85.8 72.8l-27 46.7c-22.3 38.4-47.3 72.8-85.8 72.8s-63.5-34.4-85.8-72.8l-27-46.7c-22.3-38.4-47.3-72.8-85.8-72.8" fill="none" stroke="#0081FB" strokeWidth="40" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     ),
   },
