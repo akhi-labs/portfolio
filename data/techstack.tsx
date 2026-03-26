@@ -71,11 +71,7 @@ export const techStack: TechItem[] = [
   {
     name: "Meta Ads",
     desc: "Lead gen campaigns on Facebook & Instagram — audience targeting, A/B testing, CPL optimisation.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12 12.5c-1.5-2-3.1-3.2-5-3.2C4.8 9.3 3 11 3 12.5s1.8 3.2 4 3.2c1.9 0 3.5-1.2 5-3.2zm0 0c1.5 2 3.1 3.2 5 3.2 2.2 0 4-1.7 4-3.2S19.2 9.3 17 9.3c-1.9 0-3.5 1.2-5 3.2z" />
-      </svg>
-    ),
+    icon: <img src="/logos/META.png" alt="Meta Ads" style={{ width: 22, height: 22, objectFit: "contain" }} />,
   },
   {
     name: "Python",
