@@ -71,7 +71,7 @@ export const techStack: TechItem[] = [
   {
     name: "Meta Ads",
     desc: "Lead gen campaigns on Facebook & Instagram — audience targeting, A/B testing, CPL optimisation.",
-    icon: <img src="/logos/META.png" alt="Meta Ads" style={{ width: 22, height: 22, objectFit: "contain" }} />,
+    icon: <img src="/logos/META.png" alt="Meta Ads" style={{ width: 32, height: 32, objectFit: "contain", borderRadius: 6 }} />,
   },
   {
     name: "Python",
