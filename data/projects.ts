@@ -19,6 +19,29 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    slug: "bid-pilot",
+    title: "Bid-Pilot",
+    useCase: "AI Bid & Proposal Engine — RFP Analysis, Compliance & Win Scoring",
+    tech: ["PYTHON", "FASTAPI", "REACT", "GEMINI", "OPENAI", "SCIKIT-LEARN", "SQLITE"],
+    overview:
+      "Bid and proposal managers spend 60–80% of their time reading tender documents, extracting compliance requirements, and drafting responses — and missing a single mandatory clause can disqualify the entire bid. Bid-Pilot automates that whole workflow. Upload an RFP, RFQ, or Tender (PDF or DOCX — scanned documents are handled through a vision fallback) into its own isolated workspace, and the engine extracts requirements, deadlines, budgets, and evaluation criteria using a hybrid pipeline: offline NER that always produces a result, layered with LLM extraction (Gemini with OpenAI fallback) when API keys are available.\n\nEvery extracted requirement is matched against a company capability library — past projects, certifications, and client history — using TF-IDF similarity blended with structured scoring, producing a pass/partial/fail compliance checklist where missing mandatory certifications are flagged as showstoppers the bid manager can review and override. A win-probability engine combines six weighted heuristics with a machine-learning model trained on 120 historical bids to deliver an explainable GO / NO-GO / CONDITIONAL-GO verdict. Finally, the system drafts a complete 12-section proposal — cover letter through annexures — with per-section regeneration and review markers, then exports a versioned DOCX including an auto-built compliance matrix. The full pipeline runs end-to-end in about a minute, and works entirely offline when no API keys are configured.",
+    deployedAt: [],
+    image: "/projects/Bid-Pilot.png",
+    nextSlug: "funnelgpt",
+  },
+  {
+    slug: "funnelgpt",
+    title: "FunnelGPT",
+    useCase: "AI Marketing Brain — Research → Personas → Messaging → Publish",
+    tech: ["REACT", "TYPESCRIPT", "NODE.JS", "MONGODB", "OPENAI", "RAG", "DOCKER"],
+    overview:
+      "FunnelGPT is a marketing-automation SaaS built on top of ChatGPT that gives every company its own AI marketing department. Each company gets a dedicated workspace with a Company Profile — the \"brand brain\" — holding business info, brand voice, colors, and target market. Upload a brand guide or knowledge-base document and the platform auto-fills the profile as a reviewable draft. Every AI step downstream reads this brain, so all output stays on-brand automatically.\n\nThe core is a gated content pipeline: Market Research → Audience → Messaging → Calendar → Content → Publish. Each step runs a schema-enforced, structured AI call — with separate B2B and B2C variants — and returns an editable draft the user reviews, saves, and locks before the next step unlocks; re-running an upstream step flags everything downstream as stale. Market Research produces a 16-section, web-grounded brief (competitors, positioning gaps, ranked channels, campaign test plan) exportable to DOCX and PDF. Audience builds ranked ICPs and rich personas with buying committees and funnel-stage tagging. Messaging assigns each persona one of ten proven frameworks — StoryBrand, AIDA, PAS, Hormozi Value Equation and more — with reasoning for why it fits. Prompts and models are editable per step per workspace, social accounts connect via OAuth with tokens encrypted at rest, and approved content publishes straight to LinkedIn. The whole stack ships as a Docker Compose deployment with MongoDB and a RAG layer.",
+    deployedAt: [],
+    image: "/projects/FunnelGPT.png",
+    prevSlug: "bid-pilot",
+    nextSlug: "cold-calling-agents",
+  },
+  {
     slug: "cold-calling-agents",
     title: "Multi Calling Agent",
     useCase: "Outbound Sales Automation & Inbound User Support",
@@ -30,6 +53,7 @@ export const projects: Project[] = [
       { name: "DentaSmart.AI", url: "https://dentasmart.ai" },
     ],
     image: "/projects/multi-calling-agent.png",
+    prevSlug: "funnelgpt",
     nextSlug: "voice-generative-ai",
   },
   {
@@ -149,21 +173,21 @@ export const projects: Project[] = [
     deployedAt: [{ name: "MySentry.AI", url: "https://mysentry.ai" }],
     image: "/projects/linkedin-automation.png",
     prevSlug: "email-automation",
-    nextSlug: "product-release-notes",
+    nextSlug: "campaign-pilot",
   },
   {
-    slug: "product-release-notes",
-    title: "Email Sender",
-    useCase: "Bulk Email at Zero Cost — 2,000 Emails/Day via Streamlit UI",
-    tech: ["PYTHON", "STREAMLIT", "SMTP", "CUSTOM"],
+    slug: "campaign-pilot",
+    title: "CampaignPilot",
+    useCase: "AI Email Campaign Platform — Design, Personalize & Send at Scale",
+    tech: ["NEXT.JS", "TYPESCRIPT", "POSTGRESQL", "SUPABASE", "OPENAI", "INNGEST", "RESEND"],
     overview:
-      "A custom-built bulk email tool designed to send up to 2,000 emails per day at zero platform cost. Built in Python with a Streamlit UI for non-technical use. Users upload a CSV of recipients, compose the email with a rich-text editor, and dispatch via SMTP — using Gmail, Outlook, or any custom domain. The tool handles threading, rate limiting, and retry logic to avoid bounces and spam flags. Designed for product release notes, announcements, and newsletters where a paid ESP is overkill. Used by the team as an internal alternative to Mailchimp for high-frequency sends.",
+      "A self-hostable AI email-campaign platform built as an ownership-first alternative to Mailchimp — pay cents per thousand sends instead of per-contact subscription tiers, while keeping your data, storage, and code. A five-step wizard takes a campaign from idea to inbox: schedule it, brief an AI assistant in chat (upload a logo, hero image, or even a screenshot of an email you like and the AI classifies each image and clones the design), and get back a responsive, email-client-safe HTML template in one of five style presets. A dual editor — visual click-to-edit and raw HTML code, kept in sync — gives full control before anything sends, and templates can be saved for reuse.\n\nRecipients come from a CSV or Excel upload that is parsed, deduplicated, and validated client-side, with custom columns preserved as personalization tokens for per-recipient interpolation. Sending runs as a durable background job: campaigns wait until their scheduled time, CSS is inlined for email clients, and emails go out in throttled batches with idempotent progress tracking, so retries never double-send. Supports Gmail SMTP, Resend, and AWS SES as sending providers with credentials encrypted at rest, configurable inter-email delays to protect deliverability, and up to 10,000 recipients per campaign — with live sent/failed tracking on the dashboard.",
     deployedAt: [
       { name: "MySentry.AI", url: "https://mysentry.ai" },
       { name: "DentaSmart.AI", url: "https://dentasmart.ai" },
       { name: "StressGuru.AI", url: "https://stressguru.ai" },
     ],
-    image: "/projects/email-sender.png",
+    image: "/projects/CampaignPilot.png",
     prevSlug: "linkedln-automation",
     nextSlug: "website-analyst",
   },
@@ -176,7 +200,7 @@ export const projects: Project[] = [
       "An automated website intelligence system that transforms raw user behaviour data into actionable UX insights. Microsoft Clarity tracks heatmaps, session recordings, and rage-click events. A custom N8N workflow pulls this data on a weekly schedule, runs it through an AI analysis layer, and generates a structured report with prioritised recommendations — friction points, drop-off pages, and conversion optimisation suggestions. Reports are delivered by email to the product team every Monday. Eliminates the need to manually review recordings or interpret analytics dashboards.",
     deployedAt: [{ name: "MySentry.AI", url: "https://mysentry.ai" }],
     image: "/projects/website-analyst.png",
-    prevSlug: "product-release-notes",
+    prevSlug: "campaign-pilot",
     nextSlug: "paid-marketing",
   },
   {

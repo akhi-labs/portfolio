@@ -182,7 +182,7 @@ main { padding-top: 60px; }
   margin: 0 auto;
 }
 
-/* ── Stagger extended (covers up to 13 project cards) ── */
+/* ── Stagger extended (covers up to 15 project cards) ── */
 .stagger.visible > *:nth-child(7)  { transition-delay: 480ms; }
 .stagger.visible > *:nth-child(8)  { transition-delay: 560ms; }
 .stagger.visible > *:nth-child(9)  { transition-delay: 640ms; }
@@ -190,6 +190,8 @@ main { padding-top: 60px; }
 .stagger.visible > *:nth-child(11) { transition-delay: 800ms; }
 .stagger.visible > *:nth-child(12) { transition-delay: 880ms; }
 .stagger.visible > *:nth-child(13) { transition-delay: 960ms; }
+.stagger.visible > *:nth-child(14) { transition-delay: 1040ms; }
+.stagger.visible > *:nth-child(15) { transition-delay: 1120ms; }
 
 /* ════════════════════════
    HERO — Terminal

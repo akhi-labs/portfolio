@@ -99,6 +99,31 @@ export default async function ProjectDetailPage({ params }: Props) {
           </div>
         </div>
 
+        {/* Deployed At — client chips */}
+        {project.deployedAt.length > 0 && (
+          <div className="deployed-at reveal">
+            <p className="label">DEPLOYED AT</p>
+            <div className="client-strip">
+              {project.deployedAt.map((client) =>
+                client.url ? (
+                  <a
+                    key={client.name}
+                    href={client.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="client-chip"
+                  >
+                    <span className="client-name">{client.name}</span>
+                  </a>
+                ) : (
+                  <span key={client.name} className="client-chip client-chip--static">
+                    <span className="client-name">{client.name}</span>
+                  </span>
+                )
+              )}
+            </div>
+          </div>
+        )}
 
         {/* Project-specific flowchart(s) */}
         {sections.length > 0 ? (

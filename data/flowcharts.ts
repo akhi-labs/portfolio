@@ -28,6 +28,118 @@ export interface FlowSection {
 
 export const flowcharts: Record<string, FlowSection[]> = {
 
+  "bid-pilot": [
+    {
+      title: "BID ANALYSIS — PIPELINE",
+      before: [
+        { h: "Upload RFP / RFQ / Tender",   p: "PDF or DOCX into an isolated workspace" },
+        { h: "Parse Document",              p: "Text & tables — vision fallback for scans" },
+        { h: "Extract Requirements",        p: "Hybrid offline NER + LLM, merged field-by-field" },
+        { h: "Match Capability Library",    p: "TF-IDF + structured scoring, top-3 evidence" },
+      ],
+      decision: "Mandatory Gaps?",
+      branches: [
+        {
+          label: "SHOWSTOPPER",
+          labelVariant: "no",
+          arrowVariant: "red",
+          items: [
+            { type: "step",     h: "Flag Compliance Gap", p: "Missing certification or capability", variant: "no" },
+            { type: "step",     h: "Manual Override",     p: "Bid manager reviews & resolves",      variant: "no" },
+            { type: "redirect", label: "→ Re-score" },
+          ],
+        },
+        {
+          label: "COMPLIANT",
+          labelVariant: "yes",
+          arrowVariant: "green",
+          items: [
+            { type: "step", h: "Score Win Probability", p: "6 heuristics + ML model on 120 bids", variant: "yes" },
+            { type: "step", h: "GO / NO-GO Verdict",    p: "Explainable decision with conditions", variant: "yes" },
+          ],
+        },
+      ],
+      after: [
+        { h: "Draft 12-Section Proposal", p: "LLM narrative with per-section regenerate" },
+        { h: "Review, Edit & Approve",    p: "Human-in-the-loop before export" },
+        { h: "Export DOCX",               p: "Versioned, with compliance matrix annex" },
+      ],
+      done: "SUBMITTED ✓",
+    },
+  ],
+
+  "funnelgpt": [
+    {
+      title: "CONTENT PIPELINE — FLOW",
+      before: [
+        { h: "Create Company Workspace",  p: "3-step wizard: Profile → Brand → Socials" },
+        { h: "Build the Brand Brain",     p: "Upload brand docs — AI auto-fills the profile" },
+        { h: "Market Research",           p: "Web-grounded 16-section brief, DOCX/PDF export" },
+        { h: "Audience & Personas",       p: "Ranked ICPs, buying committees, funnel stages" },
+        { h: "Messaging Frameworks",      p: "StoryBrand, AIDA, PAS — matched per persona" },
+      ],
+      decision: "Draft Approved?",
+      branches: [
+        {
+          label: "NO",
+          labelVariant: "no",
+          arrowVariant: "red",
+          items: [
+            { type: "step",     h: "Edit or Re-run Step", p: "Downstream steps flagged stale", variant: "no" },
+            { type: "redirect", label: "→ Review Again" },
+          ],
+        },
+        {
+          label: "YES",
+          labelVariant: "yes",
+          arrowVariant: "green",
+          items: [
+            { type: "step", h: "Lock Step",          p: "Output feeds the next pipeline stage", variant: "yes" },
+            { type: "step", h: "Publish to Socials", p: "OAuth-connected channels, encrypted tokens", variant: "yes" },
+            { type: "done", label: "LIVE ✓" },
+          ],
+        },
+      ],
+    },
+  ],
+
+  "campaign-pilot": [
+    {
+      title: "CAMPAIGN WIZARD — FLOW",
+      before: [
+        { h: "Create Campaign",        p: "Name it, send now or schedule" },
+        { h: "Brief the AI",           p: "Chat + upload logo, hero, or reference email" },
+        { h: "Generate HTML Template", p: "Responsive, email-client-safe, 5 style presets" },
+      ],
+      decision: "Template Approved?",
+      branches: [
+        {
+          label: "NO",
+          labelVariant: "no",
+          arrowVariant: "red",
+          items: [
+            { type: "step",     h: "Refine via Chat or Editor", p: "Visual click-to-edit or raw HTML", variant: "no" },
+            { type: "redirect", label: "→ Regenerate" },
+          ],
+        },
+        {
+          label: "YES",
+          labelVariant: "yes",
+          arrowVariant: "green",
+          items: [
+            { type: "step", h: "Upload Recipients",     p: "CSV/XLSX — deduped, validated, tokens kept", variant: "yes" },
+            { type: "step", h: "Pick Provider & Delay", p: "Gmail, Resend, or SES — encrypted creds",    variant: "yes" },
+          ],
+        },
+      ],
+      after: [
+        { h: "Throttled Batch Send", p: "Durable background job, idempotent retries" },
+        { h: "Track Results",        p: "Live sent / failed counts on the dashboard" },
+      ],
+      done: "DELIVERED ✓",
+    },
+  ],
+
   "cold-calling-agents": [
     {
       title: "OUTBOUND AGENT — FLOW",
@@ -337,18 +449,6 @@ export const flowcharts: Record<string, FlowSection[]> = {
           ],
         },
       ],
-    },
-  ],
-
-  "product-release-notes": [
-    {
-      before: [
-        { h: "Upload User Data",    p: "CSV of customer emails & names" },
-        { h: "Write Subject & Body",p: "Compose the release note email" },
-        { h: "Click Send",          p: "Single trigger via Streamlit UI" },
-        { h: "SMTP Batch Dispatch", p: "Up to 2,000 emails sent in seconds" },
-      ],
-      done: "DONE ✓",
     },
   ],
 
