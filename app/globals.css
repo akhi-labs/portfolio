@@ -828,18 +828,47 @@ main { padding-top: 60px; }
 }
 
 .credential-meta span {
+  position: relative;
   display: inline-flex;
   align-items: center;
-  min-height: 26px;
-  padding: 5px 9px;
-  border-radius: 6px;
-  border: 1px solid rgba(255,255,255,0.075);
-  background: rgba(0,0,0,0.2);
-  color: var(--text-secondary);
+  min-height: 30px;
+  padding: 6px 10px 6px 13px;
+  border-radius: 7px;
+  border: 1px solid rgba(80,210,167,0.14);
+  background:
+    linear-gradient(135deg, rgba(80,210,167,0.075), rgba(255,255,255,0.018)),
+    rgba(0,0,0,0.24);
+  color: #a9b8b2;
   font-family: var(--font-dm-mono), monospace;
   font-size: 9px;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.9px;
   text-transform: uppercase;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.04), 0 8px 20px rgba(0,0,0,0.14);
+}
+
+.credential-meta span::before {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: 7px;
+  bottom: 7px;
+  width: 2px;
+  border-radius: 99px;
+  background: #50d2a7;
+  box-shadow: 0 0 12px rgba(80,210,167,0.48);
+}
+
+.credential-meta span::after {
+  content: '';
+  position: absolute;
+  right: -1px;
+  top: -1px;
+  width: 10px;
+  height: 10px;
+  border-top: 1px solid rgba(80,210,167,0.26);
+  border-right: 1px solid rgba(80,210,167,0.26);
+  border-top-right-radius: 7px;
+  opacity: 0.72;
 }
 
 .credential-actions {
@@ -855,7 +884,7 @@ main { padding-top: 60px; }
   gap: 8px;
   min-height: 38px;
   padding: 8px 14px;
-  border-radius: 999px;
+  border-radius: 7px;
   border: 1px solid rgba(255,255,255,0.11);
   background: rgba(0,0,0,0.2);
   color: var(--text-primary);
@@ -972,7 +1001,7 @@ main { padding-top: 60px; }
 .skill-tag {
   position: relative;
   isolation: isolate;
-  min-height: 39px;
+  min-height: 38px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -983,8 +1012,8 @@ main { padding-top: 60px; }
     linear-gradient(135deg, rgba(255,255,255,0.075), rgba(255,255,255,0.018)),
     rgba(10,10,10,0.34);
   border: 1px solid rgba(255,255,255,0.105);
-  border-radius: 999px;
-  padding: 9px 16px 9px 14px;
+  border-radius: 7px;
+  padding: 9px 15px 9px 14px;
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.055), 0 10px 26px rgba(0,0,0,0.18);
   overflow: hidden;
   transition: border-color 0.25s, background 0.25s, transform 0.2s var(--ease-out), color 0.2s, box-shadow 0.25s;
@@ -992,10 +1021,11 @@ main { padding-top: 60px; }
 
 .skill-tag::before {
   content: '';
-  width: 5px;
-  height: 5px;
-  border-radius: 999px;
-  margin-right: 8px;
+  align-self: stretch;
+  width: 2px;
+  min-height: 18px;
+  border-radius: 99px;
+  margin-right: 9px;
   background: rgba(255,107,44,0.9);
   box-shadow: 0 0 12px rgba(255,107,44,0.42);
 }
@@ -1005,8 +1035,10 @@ main { padding-top: 60px; }
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(90deg, rgba(255,107,44,0.13), transparent 52%);
-  opacity: 0;
+  background:
+    linear-gradient(135deg, transparent calc(100% - 11px), rgba(255,255,255,0.1) calc(100% - 10px), transparent calc(100% - 9px)),
+    linear-gradient(90deg, rgba(255,107,44,0.13), transparent 52%);
+  opacity: 0.46;
   transition: opacity 0.25s;
 }
 
