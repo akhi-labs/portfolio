@@ -127,7 +127,6 @@ export default function HomePage() {
               </div>
               <div className="credential-content">
                 <span className="credential-eyebrow">CERTIFIED DATA ENGINEER</span>
-                <h3>Data Engineer</h3>
                 <p>Completed DataCamp&apos;s Data Engineer Certification and validated core data pipeline, SQL, and production data workflow skills.</p>
                 <div className="credential-actions">
                   <a href="https://www.datacamp.com/certificate/DE0014010483636" target="_blank" rel="noopener noreferrer">Verify credential</a>

@@ -757,6 +757,7 @@ main { padding-top: 60px; }
   color: var(--text-tertiary);
   font-size: 12px;
   line-height: 1.6;
+  margin-top: 8px;
 }
 
 .credential-actions {
