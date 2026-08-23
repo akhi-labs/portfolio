@@ -2,84 +2,220 @@ import React from "react";
 
 export interface TechItem {
   name: string;
+  category: string;
   desc: string;
   icon: React.ReactNode;
 }
 
+const iconProps = {
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "currentColor",
+  strokeWidth: "1.5",
+  strokeLinecap: "round" as const,
+  strokeLinejoin: "round" as const,
+};
+
 export const techStack: TechItem[] = [
   {
     name: "N8N",
-    desc: "Visual workflow engine powering all automation pipelines and multi-agent orchestration.",
+    category: "Automation",
+    desc: "Visual workflow engine for multi-step business automation, webhooks, and agent orchestration.",
     icon: (
-      /* N8N brand icon — node graph mark only (no text) */
-      <svg viewBox="0 0 152 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path fillRule="evenodd" clipRule="evenodd" d="M136 32C128.545 32 122.28 26.9009 120.504 20H102.166C98.2548 20 94.9173 22.8273 94.2744 26.6848L93.6168 30.6304C92.9924 34.3765 91.0974 37.6369 88.4175 40C91.0974 42.3631 92.9924 45.6235 93.6168 49.3696L94.2744 53.3152C94.9173 57.1727 98.2548 60 102.166 60H104.504C106.28 53.0991 112.545 48 120 48C128.837 48 136 55.1634 136 64C136 72.8366 128.837 80 120 80C112.545 80 106.28 74.9009 104.504 68H102.166C94.3441 68 87.6691 62.3454 86.3832 54.6304L85.7256 50.6848C85.0827 46.8273 81.7452 44 77.8345 44H71.4959C69.7198 50.9009 63.4554 56 56 56C48.5446 56 42.2802 50.9009 40.5041 44H31.4959C29.7198 50.9009 23.4554 56 16 56C7.16344 56 0 48.8366 0 40C0 31.1634 7.16344 24 16 24C23.4554 24 29.7198 29.0991 31.4959 36H40.5041C42.2802 29.0991 48.5446 24 56 24C63.4554 24 69.7198 29.0991 71.4959 36H77.8345C81.7452 36 85.0827 33.1727 85.7256 29.3152L86.3832 25.3696C87.6691 17.6546 94.3441 12 102.166 12L120.504 12C122.28 5.09909 128.545 0 136 0C144.837 0 152 7.16344 152 16C152 24.8366 144.837 32 136 32ZM136 24C140.418 24 144 20.4183 144 16C144 11.5817 140.418 8 136 8C131.582 8 128 11.5817 128 16C128 20.4183 131.582 24 136 24ZM16 48C20.4183 48 24 44.4183 24 40C24 35.5817 20.4183 32 16 32C11.5817 32 8 35.5817 8 40C8 44.4183 11.5817 48 16 48ZM64 40C64 44.4183 60.4183 48 56 48C51.5817 48 48 44.4183 48 40C48 35.5817 51.5817 32 56 32C60.4183 32 64 35.5817 64 40ZM128 64C128 68.4183 124.418 72 120 72C115.582 72 112 68.4183 112 64C112 59.5817 115.582 56 120 56C124.418 56 128 59.5817 128 64Z" fill="#EA4B71"/>
-      </svg>
-    ),
-  },
-  {
-    name: "Twilio",
-    desc: "Programmable voice & SMS layer for outbound calling agents and inbound IVR flows.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none">
-        <rect width="24" height="24" rx="5" fill="#F22F46" />
-        <circle cx="8.5" cy="8.5" r="2.4" fill="white" />
-        <circle cx="15.5" cy="8.5" r="2.4" fill="white" />
-        <circle cx="8.5" cy="15.5" r="2.4" fill="white" />
-        <circle cx="15.5" cy="15.5" r="2.4" fill="white" />
-      </svg>
-    ),
-  },
-  {
-    name: "MCPs",
-    desc: "Model Context Protocol servers that connect AI agents to external tools, APIs, and data sources.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="3" />
-        <circle cx="4"  cy="5"  r="2" />
-        <circle cx="20" cy="5"  r="2" />
-        <circle cx="4"  cy="19" r="2" />
-        <circle cx="20" cy="19" r="2" />
-        <line x1="6"  y1="6.5"  x2="10" y2="10.5" />
-        <line x1="18" y1="6.5"  x2="14" y2="10.5" />
-        <line x1="6"  y1="17.5" x2="10" y2="13.5" />
-        <line x1="18" y1="17.5" x2="14" y2="13.5" />
-      </svg>
-    ),
-  },
-  {
-    name: "Flowise",
-    desc: "Low-code RAG and LLM agent builder for deploying production chatbots fast.",
-    icon: <img src="/logos/flowise-logo.webp" alt="Flowise" style={{ width: 22, height: 22, objectFit: "contain" }} />,
-  },
-  {
-    name: "APIs",
-    desc: "REST and webhook integrations connecting every tool in the stack — the glue of every pipeline.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M4 12h16" />
-        <path d="M9 7l-5 5 5 5" />
-        <path d="M15 7l5 5-5 5" />
-      </svg>
-    ),
-  },
-  {
-    name: "Lemlist",
-    desc: "Multi-channel cold outreach — email sequences and LinkedIn automation in one platform.",
-    icon: <img src="/logos/lemlist.webp" alt="Lemlist" style={{ width: 22, height: 22, objectFit: "contain" }} />,
-  },
-  {
-    name: "Meta Ads",
-    desc: "Lead gen campaigns on Facebook & Instagram — audience targeting, A/B testing, CPL optimisation.",
-    icon: (
-      <svg viewBox="0 0 24 24" width="22" height="22" xmlns="http://www.w3.org/2000/svg">
-        <path fill="#0081FB" d="M6.915 4.03c-1.968 0-3.683 1.28-4.871 3.113C.704 9.208 0 11.883 0 14.449c0 .706.07 1.369.21 1.973a6.624 6.624 0 0 0 .265.86 5.297 5.297 0 0 0 .371.761c.696 1.159 1.818 1.927 3.593 1.927 1.497 0 2.633-.671 3.965-2.444.76-1.012 1.144-1.626 2.663-4.32l.756-1.339.186-.325c.061.1.121.196.183.3l2.152 3.595c.724 1.21 1.665 2.556 2.47 3.314 1.046.987 1.992 1.22 3.06 1.22 1.075 0 1.876-.355 2.455-.843a3.743 3.743 0 0 0 .81-.973c.542-.939.861-2.127.861-3.745 0-2.72-.681-5.357-2.084-7.45-1.282-1.912-2.957-2.93-4.716-2.93-1.047 0-2.088.467-3.053 1.308-.652.57-1.257 1.29-1.82 2.05-.69-.875-1.335-1.547-1.958-2.056-1.182-.966-2.315-1.303-3.454-1.303zm10.16 2.053c1.147 0 2.188.758 2.992 1.999 1.132 1.748 1.647 4.195 1.647 6.4 0 1.548-.368 2.9-1.839 2.9-.58 0-1.027-.23-1.664-1.004-.496-.601-1.343-1.878-2.832-4.358l-.617-1.028a44.908 44.908 0 0 0-1.255-1.98c.07-.109.141-.224.211-.327 1.12-1.667 2.118-2.602 3.358-2.602zm-10.201.553c1.265 0 2.058.791 2.675 1.446.307.327.737.871 1.234 1.579l-1.02 1.566c-.757 1.163-1.882 3.017-2.837 4.338-1.191 1.649-1.81 1.817-2.486 1.817-.524 0-1.038-.237-1.383-.794-.263-.426-.464-1.13-.464-2.046 0-2.221.63-4.535 1.66-6.088.454-.687.964-1.226 1.533-1.533a2.264 2.264 0 0 1 1.088-.285z"/>
+      <svg {...iconProps}>
+        <circle cx="5" cy="12" r="2" />
+        <circle cx="12" cy="7" r="2" />
+        <circle cx="19" cy="12" r="2" />
+        <circle cx="12" cy="17" r="2" />
+        <path d="M7 11 10.2 8.3" />
+        <path d="M13.8 8.3 17 11" />
+        <path d="M17 13 13.8 15.7" />
+        <path d="M10.2 15.7 7 13" />
       </svg>
     ),
   },
   {
     name: "Python",
-    desc: "Scripting for bespoke API integrations, scrapers, and automation logic beyond what no-code tools handle.",
-    icon: <img src="/tech/python.svg" alt="Python" style={{ width: 22, height: 22 }} />,
+    category: "Engineering",
+    desc: "Scripting layer for custom integrations, scrapers, data processing, and automation logic.",
+    icon: (
+      <svg {...iconProps}>
+        <path d="M8 12H6a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h6a2 2 0 0 1 2 2v4H8a2 2 0 0 0 0 4h8" />
+        <path d="M16 12h2a3 3 0 0 1 3 3v2a3 3 0 0 1-3 3h-6a2 2 0 0 1-2-2v-4h6a2 2 0 0 0 0-4H8" />
+        <path d="M8 6h.01" />
+        <path d="M16 18h.01" />
+      </svg>
+    ),
+  },
+  {
+    name: "PostgreSQL",
+    category: "Database",
+    desc: "Relational database layer for structured storage, SQL transformations, and analytics-ready tables.",
+    icon: (
+      <svg {...iconProps}>
+        <ellipse cx="12" cy="5" rx="7" ry="3" />
+        <path d="M5 5v7c0 1.7 3.1 3 7 3s7-1.3 7-3V5" />
+        <path d="M5 12v7c0 1.7 3.1 3 7 3s7-1.3 7-3v-7" />
+      </svg>
+    ),
+  },
+  {
+    name: "Airflow",
+    category: "Orchestration",
+    desc: "Scheduler and dependency manager for repeatable batch jobs and production data pipelines.",
+    icon: (
+      <svg {...iconProps}>
+        <circle cx="12" cy="12" r="3" />
+        <path d="M12 3v6" />
+        <path d="M12 15v6" />
+        <path d="M3 12h6" />
+        <path d="M15 12h6" />
+        <path d="m5.6 5.6 4.2 4.2" />
+        <path d="m14.2 14.2 4.2 4.2" />
+        <path d="m18.4 5.6-4.2 4.2" />
+        <path d="m9.8 14.2-4.2 4.2" />
+      </svg>
+    ),
+  },
+  {
+    name: "dbt",
+    category: "Transform",
+    desc: "Analytics engineering workflow for modular SQL models, lineage, documentation, and tests.",
+    icon: (
+      <svg {...iconProps}>
+        <path d="M4 7h7v7H4z" />
+        <path d="M13 10h7v7h-7z" />
+        <path d="M8 14v3h5" />
+        <path d="M11 10h2" />
+      </svg>
+    ),
+  },
+  {
+    name: "Spark",
+    category: "Processing",
+    desc: "Distributed processing model for larger datasets, batch transforms, and scalable data jobs.",
+    icon: (
+      <svg {...iconProps}>
+        <path d="m13 2-8 12h6l-1 8 9-13h-6z" />
+      </svg>
+    ),
+  },
+  {
+    name: "OpenAI API",
+    category: "AI Runtime",
+    desc: "LLM runtime for extraction, classification, generation, decisioning, and tool-assisted workflows.",
+    icon: (
+      <svg {...iconProps}>
+        <path d="M12 3a4 4 0 0 1 3.6 2.3 4 4 0 0 1 4.1 6 4 4 0 0 1-1.2 6.1 4 4 0 0 1-6.5 2.3 4 4 0 0 1-6.5-2.3 4 4 0 0 1-1.2-6.1 4 4 0 0 1 4.1-6A4 4 0 0 1 12 3Z" />
+        <path d="M8.5 9.2 12 7.2l3.5 2" />
+        <path d="M8.5 14.8 12 16.8l3.5-2" />
+        <path d="M12 7.2v9.6" />
+      </svg>
+    ),
+  },
+  {
+    name: "Pinecone",
+    category: "Vector DB",
+    desc: "Vector storage for semantic search, retrieval pipelines, and RAG knowledge bases.",
+    icon: (
+      <svg {...iconProps}>
+        <circle cx="12" cy="12" r="3" />
+        <path d="M12 3v3" />
+        <path d="M12 18v3" />
+        <path d="M3 12h3" />
+        <path d="M18 12h3" />
+        <path d="m5.6 5.6 2.1 2.1" />
+        <path d="m16.3 16.3 2.1 2.1" />
+        <path d="m18.4 5.6-2.1 2.1" />
+        <path d="m7.7 16.3-2.1 2.1" />
+      </svg>
+    ),
+  },
+  {
+    name: "Flowise",
+    category: "AI Builder",
+    desc: "Low-code RAG and LLM agent builder for deploying production chatbots quickly.",
+    icon: (
+      <svg {...iconProps}>
+        <path d="M5 5h6v6H5z" />
+        <path d="M13 13h6v6h-6z" />
+        <path d="M11 8h3a2 2 0 0 1 2 2v3" />
+        <path d="M8 11v3a2 2 0 0 0 2 2h3" />
+      </svg>
+    ),
+  },
+  {
+    name: "MCPs",
+    category: "Agent Tools",
+    desc: "Protocol layer that connects AI agents to external tools, APIs, and data sources.",
+    icon: (
+      <svg {...iconProps}>
+        <circle cx="12" cy="12" r="3" />
+        <circle cx="4" cy="5" r="2" />
+        <circle cx="20" cy="5" r="2" />
+        <circle cx="4" cy="19" r="2" />
+        <circle cx="20" cy="19" r="2" />
+        <path d="M6 6.5 10 10.5" />
+        <path d="M18 6.5 14 10.5" />
+        <path d="M6 17.5 10 13.5" />
+        <path d="M18 17.5 14 13.5" />
+      </svg>
+    ),
+  },
+  {
+    name: "Twilio",
+    category: "Voice & SMS",
+    desc: "Programmable voice and SMS layer for outbound calling agents and inbound IVR flows.",
+    icon: (
+      <svg {...iconProps}>
+        <rect x="4" y="4" width="16" height="16" rx="4" />
+        <circle cx="9" cy="9" r="1.5" />
+        <circle cx="15" cy="9" r="1.5" />
+        <circle cx="9" cy="15" r="1.5" />
+        <circle cx="15" cy="15" r="1.5" />
+      </svg>
+    ),
+  },
+  {
+    name: "Lemlist",
+    category: "Outreach",
+    desc: "Multi-channel cold outreach platform for email sequences and LinkedIn automation.",
+    icon: (
+      <svg {...iconProps}>
+        <path d="M4 7h16v10H4z" />
+        <path d="m4 8 8 6 8-6" />
+        <path d="M8 19h8" />
+      </svg>
+    ),
+  },
+  {
+    name: "Meta Ads",
+    category: "Acquisition",
+    desc: "Lead generation campaigns across Facebook and Instagram with targeting and A/B testing.",
+    icon: (
+      <svg {...iconProps}>
+        <path d="M4 16c0-4.5 2-8 4.5-8 1.7 0 2.8 1.3 3.5 2.4C12.7 9.3 13.8 8 15.5 8 18 8 20 11.5 20 16c0 1.7-.8 3-2.2 3-1.2 0-2.1-.8-3.2-2.7L12 12l-2.6 4.3C8.3 18.2 7.4 19 6.2 19 4.8 19 4 17.7 4 16Z" />
+      </svg>
+    ),
+  },
+  {
+    name: "Supabase",
+    category: "Backend",
+    desc: "Backend platform for Postgres, auth, storage, and fast product data layers.",
+    icon: (
+      <svg {...iconProps}>
+        <path d="M13 3 5 14h6l-1 7 9-12h-6z" />
+      </svg>
+    ),
+  },
+  {
+    name: "Vercel",
+    category: "Deployment",
+    desc: "Production deployment platform for fast Next.js releases, previews, and frontend hosting.",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="m12 4 9 16H3z" />
+      </svg>
+    ),
   },
 ];

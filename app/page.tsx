@@ -154,10 +154,22 @@ export default function HomePage() {
           </div>
 
           <div className="skills-col">
-            <h3>Skills</h3>
-            {skillCategories.map((cat) => (
-              <div key={cat.label} className="skill-category">
-                <p className="skill-category-label">{cat.label}</p>
+            <div className="skills-head">
+              <span className="skills-head-label">CAPABILITY MAP</span>
+              <h3>Skills</h3>
+            </div>
+            {skillCategories.map((cat, index) => (
+              <div
+                key={cat.label}
+                className={`skill-category${cat.label === "DATA ENGINEERING" ? " skill-category--data" : ""}`}
+              >
+                <div className="skill-category-head">
+                  <span className="skill-category-num">{String(index + 1).padStart(2, "0")}</span>
+                  <div>
+                    <p className="skill-category-label">{cat.label}</p>
+                    <p className="skill-category-desc">{cat.description}</p>
+                  </div>
+                </div>
                 <div className="skill-tags">
                   {cat.skills.map((skill) => (
                     <span key={skill} className="skill-tag">{skill}</span>
@@ -195,6 +207,7 @@ export default function HomePage() {
               <div className="tech-card-icon">
                 {item.icon}
               </div>
+              <span className="tech-card-category">{item.category}</span>
               <h3>{item.name}</h3>
               <p>{item.desc}</p>
             </div>

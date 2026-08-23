@@ -7,6 +7,7 @@ export interface ExperienceEntry {
 
 export interface SkillCategory {
   label: string;
+  description: string;
   skills: string[];
 }
 
@@ -36,23 +37,23 @@ export const experience: ExperienceEntry[] = [
 
 export const skillCategories: SkillCategory[] = [
   {
-    label: "TECHNICAL",
-    skills: ["HTML", "CSS", "JavaScript", "Python", "SQL", "REST APIs", "Git", "Web Scraping", "Webhooks"],
+    label: "AUTOMATION ARCHITECTURE",
+    description: "Turning messy business operations into reliable workflows with clean handoffs, fallbacks, and monitoring paths.",
+    skills: ["Workflow Design", "Process Mapping", "API Integration", "Webhook Logic", "Exception Handling", "Human-in-the-loop Flows"],
   },
   {
     label: "DATA ENGINEERING",
-    skills: ["ETL/ELT", "Data Pipelines", "Data Lakes", "Data Warehousing", "Data Modeling", "PostgreSQL", "Airflow", "dbt", "Spark", "Data Quality"],
+    description: "Designing structured data movement from source systems into usable, trustworthy analytical layers.",
+    skills: ["ETL/ELT Design", "Data Pipeline Architecture", "Data Lakes", "Data Warehousing", "Data Modeling", "SQL Transformations", "Data Quality Checks", "Batch Processing"],
   },
   {
-    label: "AI TOOLS & FRAMEWORKS",
-    skills: ["CrewAI", "LangChain", "MCPs", "Vapi", "HeyGen", "OpenAI API", "ElevenLabs", "N8N", "Pinecone"],
+    label: "AI SYSTEMS",
+    description: "Building agentic systems that can retrieve knowledge, call tools, make decisions, and complete multi-step work.",
+    skills: ["Agent Design", "RAG Workflows", "Prompt Systems", "Tool Calling", "Knowledge Retrieval", "Evaluation Loops", "Voice AI Flows"],
   },
   {
-    label: "BUSINESS & MARKETING",
-    skills: ["Cold Outreach", "Funnel Creation", "Semantic SEO", "Business Analysis"],
-  },
-  {
-    label: "DEPLOYMENT & PLATFORMS",
-    skills: ["Vercel", "Bolt", "Render", "Antigravity", "Zapier", "Supabase"],
+    label: "GROWTH SYSTEMS",
+    description: "Connecting automation to real business outcomes: leads, content velocity, routing, reporting, and campaign ops.",
+    skills: ["Cold Outreach Strategy", "Funnel Automation", "Semantic SEO Systems", "Lead Routing", "Campaign Operations", "Reporting Dashboards"],
   },
 ];
