@@ -92,6 +92,14 @@ export default function RootLayout({
           </p>
           <div className="flex gap-6">
             <a
+              href="https://github.com/akhi-labs/portfolio"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[var(--text-tertiary)] text-sm hover:text-[var(--accent)] transition-colors"
+            >
+              GitHub
+            </a>
+            <a
               href="https://www.linkedin.com/in/ahmed-m-xii"
               target="_blank"
               rel="noopener noreferrer"

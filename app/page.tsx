@@ -95,8 +95,18 @@ export default function HomePage() {
       <RevealSection as="section" className="experience-skills">
         <p className="section-label">EXPERIENCE &amp; SKILLS</p>
         <div className="section-heading-row">
-          <h2 className="section-heading">What I Bring to the Table</h2>
+          <div>
+            <h2 className="section-heading">What I Bring to the Table</h2>
+            <p className="section-kicker">Automation, data systems, and growth workflows built with production discipline.</p>
+          </div>
           <div className="line" />
+          <a href="/resume.pdf" download className="resume-download-btn" aria-label="Download Muhammad Ahmed resume">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 3v11m0 0 4-4m-4 4-4-4" />
+              <path d="M5 17v2a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-2" />
+            </svg>
+            <span>Resume</span>
+          </a>
         </div>
 
         <div className="exp-skills-grid">
@@ -110,6 +120,21 @@ export default function HomePage() {
                 <div className="accent-bar" />
               </div>
             ))}
+
+            <div className="credential-card">
+              <div className="credential-badge-wrap">
+                <img src="/certifications/data-engineering-badge.png" alt="DataCamp Data Engineering certification badge" />
+              </div>
+              <div className="credential-content">
+                <span className="credential-eyebrow">NEW CERTIFICATION</span>
+                <h3>Data Engineer Associate</h3>
+                <p>Completed DataCamp&apos;s Data Engineering Certification and validated core data pipeline, SQL, and production data workflow skills.</p>
+                <div className="credential-actions">
+                  <a href="https://www.datacamp.com/certificate/DE0014010483636" target="_blank" rel="noopener noreferrer">Verify credential</a>
+                  <a href="/certifications/DE0014010483636.pdf" target="_blank" rel="noopener noreferrer">View PDF</a>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="skills-col">
@@ -133,12 +158,24 @@ export default function HomePage() {
       {/* ═══ TECH STACK ═══ */}
       <RevealSection as="section" className="tech-stack">
         <div className="tech-stack-header">
-          <h2>Tech <span className="accent">Stack</span></h2>
+          <div>
+            <p className="section-label">AUTOMATION TOOLCHAIN</p>
+            <h2>Tech <span className="accent">Stack</span></h2>
+          </div>
           <div className="line" />
         </div>
+        <div className="tech-stack-intro">
+          <p>Core tools I use to design, ship, and monitor AI-assisted business systems.</p>
+          <div className="tech-stack-pills" aria-label="Technology stack focus areas">
+            <span>Agent orchestration</span>
+            <span>Voice &amp; outreach</span>
+            <span>Data pipelines</span>
+          </div>
+        </div>
         <div className="tech-grid stagger">
-          {techStack.map((item) => (
+          {techStack.map((item, index) => (
             <div key={item.name} className="tech-card">
+              <span className="tech-card-index">{String(index + 1).padStart(2, "0")}</span>
               <div className="tech-card-icon">
                 {item.icon}
               </div>

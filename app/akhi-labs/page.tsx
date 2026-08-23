@@ -10,7 +10,7 @@ export default function AkhiLabsPage() {
   return (
     <main>
       <section className="akhi-labs-page">
-        <p className="labs-label">// AKHI-LABS</p>
+        <p className="labs-label">{"// AKHI-LABS"}</p>
         <h1 className="labs-heading">Coming Soon</h1>
         <p className="labs-sub">Experiments, tools, and things that don&apos;t fit anywhere else — loading.</p>
 
