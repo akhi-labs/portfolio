@@ -693,98 +693,248 @@ main { padding-top: 60px; }
 .credential-card {
   position: relative;
   display: grid;
-  grid-template-columns: 112px 1fr;
-  gap: 20px;
-  align-items: center;
-  padding: 22px;
-  margin-top: 4px;
-  border: 1px solid rgba(36,154,121,0.28);
+  grid-template-columns: 124px 1fr;
+  gap: 24px;
+  align-items: stretch;
+  padding: 24px 24px 22px;
+  margin-top: 8px;
+  border: 1px solid rgba(80,210,167,0.28);
   border-radius: 8px;
   background:
-    linear-gradient(135deg, rgba(36,154,121,0.16), transparent 46%),
-    linear-gradient(135deg, rgba(255,255,255,0.055), rgba(255,255,255,0.014));
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 18px 44px rgba(0,0,0,0.24);
+    linear-gradient(90deg, rgba(80,210,167,0.11), transparent 30%),
+    radial-gradient(circle at 14% 50%, rgba(80,210,167,0.18), transparent 24%),
+    radial-gradient(circle at 82% 10%, rgba(255,107,44,0.12), transparent 28%),
+    linear-gradient(135deg, rgba(255,255,255,0.07), rgba(255,255,255,0.014));
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.07),
+    inset 0 0 0 1px rgba(255,255,255,0.015),
+    0 24px 64px rgba(0,0,0,0.32),
+    0 0 36px rgba(80,210,167,0.05);
   overflow: hidden;
+  transition: border-color 0.28s var(--ease-out), transform 0.28s var(--ease-out), box-shadow 0.28s var(--ease-out);
+}
+
+.credential-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent),
+    linear-gradient(rgba(80,210,167,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(80,210,167,0.05) 1px, transparent 1px);
+  background-size: 100% 100%, 18px 18px, 18px 18px;
+  background-position: -110% 0, 0 0, 0 0;
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.credential-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(80,210,167,0.5);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.08),
+    inset 0 0 0 1px rgba(255,255,255,0.02),
+    0 30px 78px rgba(0,0,0,0.4),
+    0 0 46px rgba(80,210,167,0.08);
 }
 
 .credential-card::after {
   content: 'DE';
   position: absolute;
-  right: -10px;
-  bottom: -38px;
+  right: -18px;
+  bottom: -46px;
   font-family: var(--font-poppins), sans-serif;
-  font-size: 118px;
+  font-size: 138px;
   font-weight: 900;
   line-height: 1;
-  color: rgba(255,255,255,0.035);
+  color: rgba(255,255,255,0.04);
   pointer-events: none;
 }
 
+.credential-status {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 28px;
+  padding: 5px 10px;
+  border: 1px solid rgba(80,210,167,0.24);
+  border-radius: 999px;
+  background: rgba(0,0,0,0.24);
+  color: #bdf7e1;
+  font-family: var(--font-dm-mono), monospace;
+  font-size: 9px;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+
+.credential-status span {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #50d2a7;
+  box-shadow: 0 0 12px rgba(80,210,167,0.8);
+}
+
 .credential-badge-wrap {
-  width: 112px;
-  height: 112px;
+  width: 124px;
+  min-height: 124px;
   display: grid;
   place-items: center;
   border-radius: 8px;
-  background: rgba(0,0,0,0.26);
-  border: 1px solid rgba(255,255,255,0.08);
+  background:
+    linear-gradient(135deg, rgba(80,210,167,0.14), rgba(0,0,0,0.2)),
+    rgba(0,0,0,0.34);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+  position: relative;
+  z-index: 1;
+}
+
+.credential-badge-wrap::before {
+  content: '';
+  position: absolute;
+  inset: 12px;
+  border-radius: 7px;
+  border: 1px solid rgba(80,210,167,0.17);
+  pointer-events: none;
+}
+
+.credential-badge-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 22px;
+  border-radius: 999px;
+  background: rgba(80,210,167,0.1);
+  filter: blur(16px);
+  pointer-events: none;
 }
 
 .credential-badge-wrap img {
-  width: 88px;
-  height: 88px;
+  width: 92px;
+  height: 92px;
   object-fit: contain;
-  filter: drop-shadow(0 12px 26px rgba(36,154,121,0.18));
+  filter: drop-shadow(0 14px 30px rgba(80,210,167,0.2));
+  position: relative;
+  z-index: 1;
+}
+
+.credential-content {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+  padding: 6px 0 2px;
+}
+
+.credential-heading-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .credential-eyebrow {
-  display: block;
-  margin-bottom: 6px;
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
   font-family: var(--font-dm-mono), monospace;
-  font-size: 10px;
+  font-size: 11px;
   color: #50d2a7;
-  letter-spacing: 2px;
+  letter-spacing: 2.8px;
+  text-shadow: 0 0 18px rgba(80,210,167,0.28);
 }
 
-.credential-content h3 {
-  font-size: 18px;
-  font-weight: 800;
-  margin-bottom: 6px;
+.credential-issuer {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.04);
+  color: var(--text-secondary);
+  font-family: var(--font-dm-mono), monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
 }
 
 .credential-content p {
-  max-width: 420px;
-  color: var(--text-tertiary);
+  max-width: 540px;
+  color: #9b9b9b;
   font-size: 12px;
-  line-height: 1.6;
-  margin-top: 8px;
+  line-height: 1.75;
+  margin-top: 10px;
+}
+
+.credential-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 13px;
+}
+
+.credential-meta span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  padding: 5px 9px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.075);
+  background: rgba(0,0,0,0.2);
+  color: var(--text-secondary);
+  font-family: var(--font-dm-mono), monospace;
+  font-size: 9px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
 }
 
 .credential-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 14px;
+  margin-top: 16px;
 }
 
 .credential-actions a {
   display: inline-flex;
-  min-height: 34px;
   align-items: center;
-  padding: 7px 12px;
+  gap: 8px;
+  min-height: 38px;
+  padding: 8px 14px;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.11);
   background: rgba(0,0,0,0.2);
   color: var(--text-primary);
   font-size: 11px;
-  font-weight: 700;
-  transition: border-color 0.2s, color 0.2s, transform 0.2s;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  transition: border-color 0.2s, color 0.2s, transform 0.2s, background 0.2s, box-shadow 0.2s;
+}
+
+.credential-actions a svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.credential-actions .credential-action-primary {
+  border-color: rgba(80,210,167,0.38);
+  background: linear-gradient(135deg, rgba(80,210,167,0.18), rgba(80,210,167,0.05));
+  color: #effff8;
+  box-shadow: 0 10px 24px rgba(80,210,167,0.08);
 }
 
 .credential-actions a:hover {
   border-color: rgba(80,210,167,0.5);
   color: #50d2a7;
-  transform: translateY(-1px);
+  background: rgba(80,210,167,0.07);
+  transform: translateY(-2px);
 }
 
 .skills-col {
@@ -1568,9 +1718,14 @@ main { padding-top: 60px; }
   .exp-col::before { left: 12px; }
   .exp-card { padding: 22px 22px 22px 48px; }
   .exp-card::before { left: 7px; }
-  .credential-card { grid-template-columns: 1fr; }
-  .credential-badge-wrap { width: 96px; height: 96px; }
-  .credential-badge-wrap img { width: 76px; height: 76px; }
+  .credential-card { grid-template-columns: 1fr; padding: 22px; gap: 18px; }
+  .credential-status { position: static; width: max-content; order: -2; }
+  .credential-badge-wrap { width: 104px; min-height: 104px; order: -1; }
+  .credential-badge-wrap img { width: 78px; height: 78px; }
+  .credential-content { padding: 0; }
+  .credential-heading-row { gap: 8px; }
+  .credential-eyebrow { font-size: 10px; letter-spacing: 2px; }
+  .credential-card::after { font-size: 94px; right: -12px; bottom: -30px; }
   .skills-col { padding: 22px; }
   .tech-stack-intro { margin-bottom: 24px; }
   .section-heading { white-space: normal; }

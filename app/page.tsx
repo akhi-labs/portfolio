@@ -122,15 +122,39 @@ export default function HomePage() {
             ))}
 
             <div className="credential-card">
+              <div className="credential-status" aria-label="Credential verified">
+                <span />
+                Verified
+              </div>
               <div className="credential-badge-wrap">
                 <img src="/certifications/data-engineering-badge.png" alt="DataCamp Data Engineering certification badge" />
               </div>
               <div className="credential-content">
-                <span className="credential-eyebrow">CERTIFIED DATA ENGINEER</span>
+                <div className="credential-heading-row">
+                  <span className="credential-eyebrow">CERTIFIED DATA ENGINEER</span>
+                  <span className="credential-issuer">DataCamp</span>
+                </div>
                 <p>Completed DataCamp&apos;s Data Engineer Certification and validated core data pipeline, SQL, and production data workflow skills.</p>
+                <div className="credential-meta" aria-label="Credential details">
+                  <span>ID: DE0014010483636</span>
+                  <span>Data pipelines</span>
+                  <span>SQL</span>
+                </div>
                 <div className="credential-actions">
-                  <a href="https://www.datacamp.com/certificate/DE0014010483636" target="_blank" rel="noopener noreferrer">Verify credential</a>
-                  <a href="/certifications/DE0014010483636.pdf" target="_blank" rel="noopener noreferrer">View PDF</a>
+                  <a className="credential-action-primary" href="https://www.datacamp.com/certificate/DE0014010483636" target="_blank" rel="noopener noreferrer">
+                    <span>Verify credential</span>
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M7 17 17 7" />
+                      <path d="M9 7h8v8" />
+                    </svg>
+                  </a>
+                  <a href="/certifications/DE0014010483636.pdf" target="_blank" rel="noopener noreferrer">
+                    <span>View PDF</span>
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M14 3v4a2 2 0 0 0 2 2h4" />
+                      <path d="M5 3h9l6 6v12H5z" />
+                    </svg>
+                  </a>
                 </div>
               </div>
             </div>
