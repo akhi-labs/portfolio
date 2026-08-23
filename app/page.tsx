@@ -126,9 +126,9 @@ export default function HomePage() {
                 <img src="/certifications/data-engineering-badge.png" alt="DataCamp Data Engineering certification badge" />
               </div>
               <div className="credential-content">
-                <span className="credential-eyebrow">NEW CERTIFICATION</span>
-                <h3>Data Engineer Associate</h3>
-                <p>Completed DataCamp&apos;s Data Engineering Certification and validated core data pipeline, SQL, and production data workflow skills.</p>
+                <span className="credential-eyebrow">CERTIFIED DATA ENGINEER</span>
+                <h3>Data Engineer</h3>
+                <p>Completed DataCamp&apos;s Data Engineer Certification and validated core data pipeline, SQL, and production data workflow skills.</p>
                 <div className="credential-actions">
                   <a href="https://www.datacamp.com/certificate/DE0014010483636" target="_blank" rel="noopener noreferrer">Verify credential</a>
                   <a href="/certifications/DE0014010483636.pdf" target="_blank" rel="noopener noreferrer">View PDF</a>
