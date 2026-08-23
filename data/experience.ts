@@ -40,6 +40,10 @@ export const skillCategories: SkillCategory[] = [
     skills: ["HTML", "CSS", "JavaScript", "Python", "SQL", "REST APIs", "Git", "Web Scraping", "Webhooks"],
   },
   {
+    label: "DATA ENGINEERING",
+    skills: ["ETL/ELT", "Data Pipelines", "Data Lakes", "Data Warehousing", "Data Modeling", "PostgreSQL", "Airflow", "dbt", "Spark", "Data Quality"],
+  },
+  {
     label: "AI TOOLS & FRAMEWORKS",
     skills: ["CrewAI", "LangChain", "MCPs", "Vapi", "HeyGen", "OpenAI API", "ElevenLabs", "N8N", "Pinecone"],
   },

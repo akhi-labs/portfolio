@@ -122,18 +122,11 @@ export default function HomePage() {
             ))}
 
             <div className="credential-card">
-              <div className="credential-status" aria-label="Credential verified">
-                <span />
-                Verified
-              </div>
               <div className="credential-badge-wrap">
                 <img src="/certifications/data-engineering-badge.png" alt="DataCamp Data Engineering certification badge" />
               </div>
               <div className="credential-content">
-                <div className="credential-heading-row">
-                  <span className="credential-eyebrow">CERTIFIED DATA ENGINEER</span>
-                  <span className="credential-issuer">DataCamp</span>
-                </div>
+                <span className="credential-eyebrow">CERTIFIED DATA ENGINEER</span>
                 <p>Completed DataCamp&apos;s Data Engineer Certification and validated core data pipeline, SQL, and production data workflow skills.</p>
                 <div className="credential-meta" aria-label="Credential details">
                   <span>ID: DE0014010483636</span>
